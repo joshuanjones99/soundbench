@@ -1,0 +1,60 @@
+.placeholder {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+}
+
+/* A drafting-sheet frame: double rule, like an unstarted manual page */
+.placeholder-frame {
+  max-width: 26rem;
+  text-align: center;
+  padding: var(--space-2xl) var(--space-xl);
+  border: 1px solid var(--rule-strong);
+  outline: 1px solid var(--rule);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+  background: var(--paper-raised);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.placeholder-icon {
+  color: var(--ink-soft);
+}
+
+.placeholder h1 {
+  font-size: var(--text-headline);
+}
+
+.placeholder-desc {
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+.placeholder-stamp {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2xs) var(--space-sm);
+  transform: rotate(-1.5deg);
+}
+
+.placeholder-note {
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+  border-top: 1px solid var(--rule);
+  padding-top: var(--space-md);
+  margin-top: var(--space-xs);
+}
+
+.placeholder-note a {
+  color: var(--schematic-ink);
+  font-weight: 500;
+  text-underline-offset: 3px;
+}

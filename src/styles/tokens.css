@@ -1,0 +1,72 @@
+/* SoundBench design tokens — source of truth: DESIGN.md ("The Annotated Service Manual") */
+
+:root {
+  /* ── Color: committed brand values ─────────────────────────── */
+  --bench-white: #f2f0e3; /* body background — warm paper stock */
+  --schematic-ink: #2e2e2e; /* text, line-art, borders (12:1 on bench-white) */
+  --signal-coral: #f76f53; /* the single accent; fills and markers only, never text on paper */
+
+  /* Derived neutrals — small steps of the paper toward/away from ink */
+  --paper-raised: #f7f5ea; /* panels that read as a fresh page */
+  --paper-sunken: #eae7d6; /* the sidebar layer, slightly deeper than the page */
+  --ink-soft: #55534b; /* secondary text — 6.7:1 on bench-white */
+  --ink-faint: rgb(46 46 46 / 0.45); /* disabled text/icons only, never body copy */
+
+  /* Hairlines and rules — ink at reduced opacity, like printed rules */
+  --rule: rgb(46 46 46 / 0.22);
+  --rule-strong: rgb(46 46 46 / 0.5);
+
+  /* Accent interaction ramp. Text on any coral fill is ink (4.8:1), never white. */
+  --coral-hover: #e35c40;
+  --coral-press: #d8543a; /* also the focus-ring color: 3.5:1 on bench-white */
+  --coral-tint: rgb(247 111 83 / 0.14); /* selection wash, marker backgrounds */
+
+  /* Semantic. Hazard is a dedicated deep red, deliberately distinct from coral. */
+  --hazard: #a4231b; /* 6.4:1 on bench-white — text-capable */
+  --hazard-tint: rgb(164 35 27 / 0.08);
+  --fixed-green: #2c6e49; /* 5.3:1 on bench-white */
+  --fixed-tint: rgb(44 110 73 / 0.1);
+
+  /* ── Typography: IBM Plex Sans (UI) + IBM Plex Mono (data) ─── */
+  --font-ui: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-data: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+  /* Fixed rem scale, ratio ≈1.2, body 17px for arm's-length bench reading */
+  --text-xs: 0.75rem; /* 12 — mono fine print, dates */
+  --text-sm: 0.875rem; /* 14 — labels, secondary UI */
+  --text-body: 1.0625rem; /* 17 — body floor */
+  --text-title: 1.25rem; /* 20 — row titles, panel headers */
+  --text-headline: 1.5rem; /* 24 — section heads */
+  --text-display: 1.875rem; /* 30 — screen titles */
+
+  /* ── Spacing: 4pt scale ────────────────────────────────────── */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* ── Shape ─────────────────────────────────────────────────── */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  /* ── Elevation: flat by default (The Printed Page Rule). ────
+     One ambient shadow, reserved for things genuinely above the page. */
+  --shadow-overlay: 0 8px 32px rgb(46 46 46 / 0.18);
+
+  /* ── Motion: responsive, never choreographed ───────────────── */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 150ms;
+  --dur-base: 200ms;
+
+  /* ── Z scale ───────────────────────────────────────────────── */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-backdrop: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+}
